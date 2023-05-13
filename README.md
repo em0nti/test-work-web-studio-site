@@ -1,99 +1,56 @@
-# Parcel template
+# Web Studio Test Project
 
-Этот проект был создан при помощи Parcel. Для знакомства и настройки
-дополнительных возможностей [обратись к документации](https://parceljs.org/).
+This repository contains a simple test project for a web studio. The project is a website built with HTML5, CSS, SCSS, and JavaScript. The layout design is available in Figma. The project was built with Parcel, using the [Parcel Project Template](https://goitacademy.github.io/parcel-project-template) by GoIT Academy. The project was done as homework while studying at GoIT Academy.
 
-## Подготовка нового проекта
+## Getting Started
 
-1. Убедись что на компьютере установлена LTS-версия Node.js.
-   [Скачай и установи](https://nodejs.org/en/) её если необходимо.
-2. Склонируй этот репозиторий.
-3. Измени имя папки с `parcel-project-template` на имя своего проекта.
-4. Создай новый пустой репозиторий на GitHub.
-5. Открой проект в VSCode, запусти терминал и свяжи проект с GitHub-репозиторием
-   [по инструкции](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#changing-a-remote-repositorys-url).
-6. Установи зависимости проекта в терминале командой `npm install` .
-7. Запусти режим разработки, выполнив команду `npm start`.
-8. Перейди в браузере по адресу [http://localhost:1234](http://localhost:1234).
-   Эта страница будет автоматически перезагружаться после сохранения изменений в
-   файлах проекта.
+These instructions will help you set up the project locally.
 
-## Файлы и папки
+### Prerequisites
 
-- Все паршалы файлов стилей должны лежать в папке `src/sass` и импортироваться в
-  файлы стилей страниц. Например, для `index.html` файл стилей называется
-  `index.scss`.
-- Изображения добавляй в папку `src/images`. Сборщик оптимизирует их, но только
-  при деплое продакшн версии проекта. Все это происходит в облаке, чтобы не
-  нагружать твой компьютер, так как на слабых машинах это может занять много
-  времени.
+- Node.js
+- NPM (Node Package Manager)
+- A modern web browser (Chrome, Firefox, Safari, Edge)
 
-## Деплой
+### Installing
 
-Для настройки деплоя проекта необходимо выполнить несколько дополнительных шагов
-по настройке твоего репозитория. Зайди во вкладку `Settings` и в подсекции
-`Actions` выбери выбери пункт `General`.
+1. Clone the repository to your local machine.
+    ```bash
+    git clone https://github.com/yourusername/web-studio-test-project.git
+    ```
+2. Navigate into the project directory.
+    ```bash
+    cd web-studio-test-project
+    ```
+3. Install the required dependencies.
+    ```bash
+    npm install
+    ```
+4. Start the project.
+    ```bash
+    npm start
+    ```
+The project will be available at `localhost:1234`.
 
-![GitHub actions settings](./assets/actions-config-step-1.png)
+## Project Structure
 
-Пролистай страницу до последней секции, в которой убедись что выбраны опции как
-на следующем изображении и нажми `Save`. Без этих настроек у сборки будет
-недостаточно прав для автоматизации процесса деплоя.
+The project is structured as follows:
 
-![GitHub actions settings](./assets/actions-config-step-2.png)
+- `src/index.html`: The main HTML file
+- `src/styles/`: This directory contains all CSS and SCSS files
+- `src/scripts/`: This directory contains all JavaScript files
+- `src/assets/`: This directory contains all static files like images
 
-Продакшн версия проекта будет автоматически собираться и деплоиться на GitHub
-Pages, в ветку `gh-pages`, каждый раз когда обновляется ветка `main`. Например,
-после прямого пуша или принятого пул-реквеста. Для этого необходимо в файле
-`package.json` отредактировать поле `homepage` и скрипт `build`, заменив
-`your_username` и `your_repo_name` на свои, и отправить изменения на GitHub.
+## Figma Layout
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/",
-"scripts": {
-  "build": "parcel build src/*.html --public-url /your_repo_name/"
-},
-```
+You can view the Figma layout for this project [here](./assets/web-studio-v-2-1.fig).
 
-Далее необходимо зайти в настройки GitHub-репозитория (`Settings` > `Pages`) и
-выставить раздачу продакшн версии файлов из папки `/root` ветки `gh-pages`, если
-это небыло сделано автоматически.
+## Contributing
 
-![GitHub Pages settings](./assets/repo-settings.png)
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-### Статус деплоя
+Please make sure to update tests as appropriate.
 
-Статус деплоя крайнего коммита отображается иконкой возле его идентификатора.
+## License
 
-- **Желтый цвет** - выполняется сборка и деплой проекта.
-- **Зеленый цвет** - деплой завершился успешно.
-- **Красный цвет** - во время линтинга, сборки или деплоя произошла ошибка.
-
-Более детальную информацию о статусе можно посмотреть кликнув по иконке, и в
-выпадающем окне перейти по ссылке `Details`.
-
-![Deployment status](./assets/status.png)
-
-### Живая страница
-
-Через какое-то время, обычно пару минут, живую страницу можно будет посмотреть
-по адресу указанному в отредактированном свойстве `homepage`. Например, вот
-ссылка на живую версию для этого репозитория
-[https://goitacademy.github.io/parcel-project-template](https://goitacademy.github.io/parcel-project-template).
-
-Если открывается пустая страница, убедись что во вкладке `Console` нет ошибок
-связанных с неправильными путями к CSS и JS файлам проекта (**404**). Скорее
-всего у тебя неправильное значение свойства `homepage` или скрипта `build` в
-файле `package.json`.
-
-## Как это работает
-
-![How it works](./assets/how-it-works.png)
-
-1. После каждого пуша в ветку `main` GitHub-репозитория, запускается специальный
-   скрипт (GitHub Action) из файла `.github/workflows/deploy.yml`.
-2. Все файлы репозитория копируются на сервер, где проект инициализируется и
-   проходит сборку перед деплоем.
-3. Если все шаги прошли успешно, собранная продакшн версия файлов проекта
-   отправляется в ветку `gh-pages`. В противном случае, в логе выполнения
-   скрипта будет указано в чем проблема.
+[MIT](https://choosealicense.com/licenses/mit)
