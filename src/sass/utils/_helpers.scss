@@ -1,0 +1,81 @@
+%link {
+  text-decoration: none;
+  color: currentColor;
+}
+
+%list {
+  margin: 0;
+  padding-left: 0;
+
+  list-style-type: none;
+}
+
+%button {
+  padding: 0;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+// media query mixin
+@mixin mq($type) {
+  $sm: $container-width-sm;
+  $md: $container-width-md;
+  $lg: $container-width-lg;
+
+  @if $type == sm {
+    @media screen and (min-width: $sm) {
+      @content;
+    }
+  } @else if $type == sm-only {
+    @media screen and (max-width: #{$md - 0.02}) {
+      @content;
+    }
+  } @else if $type == md {
+    @media screen and (min-width: $md) {
+      @content;
+    }
+  } @else if $type == md-only {
+    @media screen and (min-width: $md) and (max-width: #{$lg - 0.02}) {
+      @content;
+    }
+  } @else if $type == lg {
+    @media screen and (min-width: $lg) {
+      @content;
+    }
+  } @else if $type == not-lg {
+    @media screen and (max-width: #{$lg - 0.02}) {
+      @content;
+    }
+  } @else if $type == retina {
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      @content;
+    }
+  } @else {
+    @error "Unknow type breakpoint #{$type}.";
+  }
+}
+// Міксін для секції
+@mixin section($padding-top: var(--section-padding-default), $padding-bottom: $padding-top, $background:inherit) {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+  background-color: $background;
+}
+
+@mixin section-title() {
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+
+  @include mq(lg) {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+  }
+}
+

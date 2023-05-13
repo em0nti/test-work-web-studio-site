@@ -1,0 +1,34 @@
+/*=============================================
+=            Header            =
+=============================================*/
+
+.header {
+  border-bottom: 1px solid var(--color-site-gray-1);
+
+  @include mq(sm-only) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  margin-right: auto;
+
+  @include mq(md) {
+    margin-right: 87px;
+  }
+
+  @include mq(lg) {
+    margin-right: 93px;
+  }
+}
+
+.header__main-navigation {
+  margin-right: auto;
+}
+/*=====  End of Header  ======*/

@@ -1,0 +1,21 @@
+.container {
+  min-width: 320px;
+  padding-left: var(--container-padding-h);
+  padding-right: var(--container-padding-h);
+  margin: 0 auto;
+
+  // small screen
+  @include mq(sm) {
+    width: $container-width-sm;
+  }
+
+  //medium screen
+  @include mq(md) {
+    width: $container-width-md;
+  }
+
+  //Large screen
+  @include mq(lg) {
+    width: $container-width-lg;
+  }
+}
