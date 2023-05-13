@@ -1,0 +1,53 @@
+/*----------  Team section  ----------*/
+.team {
+  @include section($background: var(--color-site-2));
+}
+
+.team__title {
+  @include section-title();
+}
+
+.team__list {
+  @extend %list;
+}
+
+.team__item {
+  --items: 1;
+
+  @include mq(md) {
+    --items: 2;
+  }
+
+  @include mq(lg) {
+    --items: 4;
+  }
+
+  background-color: var(--color-white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  border-radius: 0 0 4px 4px;
+}
+
+.team__text {
+  padding: 30px 32px 24px;
+
+  text-align: center;
+}
+
+.team__heading {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+.team__desc {
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  line-height: 1.19;
+
+  color: var(--color-font-2);
+}

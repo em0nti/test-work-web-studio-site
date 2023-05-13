@@ -1,0 +1,43 @@
+/*----------  Projects section  ----------*/
+.projects {
+  @include mq(not-lg) {
+    display: none;
+  }
+  @include section(0, var(--section-padding-lg));
+}
+
+.projects__title {
+  @include section-title();
+}
+
+.projects__list {
+  @extend %list;
+}
+.projects__item {
+  --items: 3;
+
+  position: relative;
+}
+
+.projects__label {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  height: 70px;
+  width: 100%;
+
+  padding: 27px 0;
+
+  background-color: var(--color-dark-overlay-1);
+}
+
+.projects__heading {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--color-font-3-c);
+}

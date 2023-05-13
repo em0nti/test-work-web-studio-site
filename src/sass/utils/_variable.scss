@@ -1,0 +1,52 @@
+:root {
+  // Layouts
+  --section-padding-default: 60px;
+  --section-padding-lg: 94px;
+  --container-padding-h: 15px;
+  /* card-set */
+  --items: 1;
+  --indent: 30px;
+  --diametr-social-link: 44px;
+
+  // Colors
+  --color-white: #fff;
+  --color-white-opacity-1: rgba(255, 255, 255, 0.1);
+  --color-black: #000;
+  --color-black-opacity-1: rgba(0, 0, 0, 0.1);
+  --color-black-opacity-2: rgba(0, 0, 0, 0.2);
+
+  --color-dark-overlay-1: rgba(47, 48, 58, 0.8);
+
+  --color-brand-1: #2196f3;
+  --color-brand-opacity: rgba(33, 150, 243, 0.9);
+  --color-brand-2: var(--color-black);
+
+  --color-font-1: #212121;
+  --color-font-2: #757575;
+  --color-font-3-c: var(--color-white);
+  --color-font-4-t: rgba(255, 255, 255, 0.6);
+
+  --color-site-1: #2f303a;
+  --color-site-2: #f5f4fa;
+  --color-site-3: #eee;
+  --color-site-gray-1: #ececec;
+  --color-site-gray-2: #afb1b8;
+  --color-site-gray-3: rgba(33, 33, 33, 0.2);
+  --color-site-gray-4: rgba(117, 117, 117, 0.5);
+
+  --hero-gradient: linear-gradient(
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  );
+  /*fill icons*/
+  --color-btn-active: #188ce8;
+
+  /* transition */
+  --transition-duration: 250ms;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+//Media Breakpoints
+$container-width-sm: 480px;
+$container-width-md: 768px;
+$container-width-lg: 1200px;

@@ -1,0 +1,22 @@
+.toggle-button {
+  @extend %button;
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  color: var(--color-black);
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.toggle-button__icon {
+  fill: currentColor;
+}

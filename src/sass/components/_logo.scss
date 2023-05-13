@@ -1,0 +1,20 @@
+/*----------  Logo  ----------*/
+
+.logo {
+    @extend %link;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+  }
+
+  .logo__first-word {
+    color: var(--color-brand-1);
+  }
+
+  .logo__second-word {
+    color: var(--color-brand-2);
+  }
+
+  .logo--theme-dark > .logo__second-word {
+    color: var(--color-font-3-c);
+  }
